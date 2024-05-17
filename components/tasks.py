@@ -1,4 +1,6 @@
 import json
+
+
 def clearing_row_value():
     data = {
         'row': 0
@@ -6,6 +8,8 @@ def clearing_row_value():
     print("działam")
     with open("config.json", "w") as file:
         json.dump(data, file)
+
+
 def save_task(task_row, content, date):
     try:
         with open("saved.json", 'r') as file:
@@ -22,6 +26,7 @@ def save_task(task_row, content, date):
 
     with open("saved.json", 'w') as file:
         json.dump(tasks_dict, file, indent=4)
+
 
 def delete_task(row):
     try:
